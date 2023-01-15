@@ -47,8 +47,7 @@ body {
 }
 
 .resume__block {
-    padding-bottom: 30px;
-    margin-bottom: 15px;
+    margin: 50px 0;
 }
 
 @media screen and (max-width: 576px) {
@@ -175,15 +174,34 @@ body {
     text-align: justify;
 }
 
-.skills__header {
-    color: var(--secondary-text-color);
-    text-align: center;
-    margin-bottom: 15px;
+.skills {
+    margin: 50px 0;
 }
 
-.skills__text {
+.skills__header {
+    /* color: var(--secondary-text-color); */
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.skills__sub-header {
     color: var(--secondary-text-color);
-    text-align: justify;
+    font-style: normal;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.skills__body {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.skills__icon-wrapper {
+    width: 100px;
+    height: 100px;
 }
 
 /* Experience and additonal info */
