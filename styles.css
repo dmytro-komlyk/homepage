@@ -337,3 +337,9 @@ body {
 .additional-info__languages-item {
     color: var(--secondary-text-color);
 }
+
+.hobby__header {
+    color: var(--secondary-text-color);
+    text-align: left;
+    margin-bottom: 20px;
+}
