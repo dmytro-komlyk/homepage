@@ -18,7 +18,7 @@ body {
 
 .container {
     margin: 0 auto;
-    padding: 0 30px;
+    padding: 0 100px;
     max-width: 900px;
 }
 
@@ -34,6 +34,10 @@ body {
     justify-content: space-between;
 }
 
+.f-1 {
+    flex: 1 1;
+}
+
 .resume {
     margin: 50px auto;
     border: 1px solid #f5f5f5;
@@ -43,7 +47,6 @@ body {
 }
 
 .resume__block {
-    border-bottom: 3px solid var(--border-color);
     padding-bottom: 30px;
     margin-bottom: 15px;
 }
@@ -59,8 +62,14 @@ body {
         align-items: center;
     }
 
-    .contact-info__block:not(:last-child) {
-        margin-bottom: 20px;
+    .contact_info_container .contact-info__block .contact-info__header {
+        text-align: center;
+        margin-top: 25px;
+    }
+
+    .contact_info_container .contact-info__block .contact-info__icons {
+        margin-bottom: 25px;
+        justify-content: center;
     }
 
     .experiences {
@@ -69,16 +78,23 @@ body {
 }
 
 /* Contact info  */
-.contact-info__header,
-.contact-info__sub-header {
-    text-align: center;
+.contact_info_container {
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .contact-info__header {
+    font-size: 2rem;
     color: var(--primary-text-color);
     margin-bottom: 15px;
     text-decoration-color: var(--text-decoration-color);
-    text-decoration-line: underline;
+}
+
+.contact-info__header-name {
+    background: -webkit-linear-gradient(var(--secondary-text-color), var(--text-decoration-color));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .contact-info__sub-header {
@@ -87,13 +103,17 @@ body {
 }
 
 .contact-info__block {
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
-.contact-info__block--center {
-    justify-content: center;
+.contact-info__icons {
+    display: flex;
+    gap: 20px;   
+    justify-content: end;
+    margin-bottom: 50px;
 }
 
 .contact-info__item {
@@ -103,12 +123,7 @@ body {
     justify-content: start;
 }
 
-.contact-info__item:not(:last-child) {
-    margin-bottom: 20px;
-}
-
 .contact-info__item-icon-wrapper {
-    margin-right: 10px;
     width: 20px;
     display: flex;
     justify-content: center;
@@ -125,8 +140,9 @@ body {
 
 .contact-info__avatar {
     border-radius: 50%;
-    width: 100px;
-    height: 100px;
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
     object-fit: cover;
     border: 3px solid;
     border-color: var(--text-decoration-color);
