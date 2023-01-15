@@ -151,6 +151,9 @@ body {
 .intro {
     display: flex;
     justify-content: start;
+    box-shadow: var(--border-color) 0px 2px 8px 0px;
+    padding: 30px;
+    border-radius: 30px;
 }
 
 .intro__icon-wrapper {
@@ -206,16 +209,17 @@ body {
 
 /* Experience and additonal info */
 .main-info {
+    margin-top: 50px;
     gap: 50px;
+    order: 2;
 }
 .experiences {
-    flex: 1 1 60%;
-    margin-right: 50px;
+    flex: 1 1;
     order: 2;
 }
 
 .experiences__header {
-    /* color: var(--secondary-text-color); */
+    color: var(--secondary-text-color);
     text-align: center;
     margin-bottom: 20px;
 }
@@ -227,11 +231,20 @@ body {
 
 .experiences__company-cards {
     display: flex;
-    gap: 25px;
+    gap: 50px;
 }
 
-.experiences__company-card-item {
-    width: 33%;
+.experiences__company-project {
+    display: flex;
+    flex: 1 1 30%;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: var(--border-color) 0px 2px 8px 0px;
+}
+
+.experiences__company-project-image {
+    width: 100%;
 }
 
 .experiences__company-header-durability {
@@ -244,15 +257,10 @@ body {
 .experiences__company-header-name {
     color: var(--primary-text-color);
     text-decoration-color: var(--text-decoration-color);
-    text-decoration-line: underline;
-    text-align: left;
+    text-align: center;
     margin-bottom: 20px;
 }
 
-.experiences__company-project {
-    margin-left: 15px;
-    margin-bottom: 25px;
-}
 
 .experiences__company-project-role {
     color: var(--durability-text-color);
